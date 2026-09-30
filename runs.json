@@ -1,0 +1,18 @@
+{
+  "about": "One entry per AI run. 'file' is the raw answer file; tools/build.py turns these into data/responses.json for the page. Add a new model by running it cold (tools/run_headless.sh or the app) and adding an entry here.",
+  "runs": [
+    {"id": "claude-opus-5.5", "ai": "Claude Opus 5.5", "maker": "Anthropic", "date": "2026-09-29", "via": "Claude Code subagent", "file": "raw/2026-09-29/claude-opus-5.5.md",
+     "caveat": "Started inside Jaron's project, so it also read the project's instruction file (which says limits belong in scripts, with bold work inside them). Its Prompt 2 answer echoes that line. Not a fully cold read."},
+    {"id": "claude-sonnet-5.5", "ai": "Claude Sonnet 5.5", "maker": "Anthropic", "date": "2026-09-29", "via": "Claude Code subagent", "file": "raw/2026-09-29/claude-sonnet-5.5.md",
+     "caveat": "Same project-instructions caveat as Opus (Prompt 2 mentions 'a hard limit in code')."},
+    {"id": "claude-haiku-4.5", "ai": "Claude Haiku 4.5", "maker": "Anthropic", "date": "2026-09-29", "via": "Claude Code subagent", "file": "raw/2026-09-29/claude-haiku-4.5.md",
+     "caveat": "Same project-instructions caveat as Opus."},
+    {"id": "claude-fable-5.1", "ai": "Claude Fable 5.1", "maker": "Anthropic", "date": "2026-09-29", "via": "Claude Code subagent", "file": "raw/2026-09-29/claude-fable-5.1.md",
+     "caveat": "Same project-instructions caveat as Opus (Prompt 2 mentions 'an approve button' and 'a hard limit built into the script')."},
+    {"id": "gpt-6-luna", "ai": "GPT-6 Luna", "maker": "OpenAI", "date": "2026-09-29", "via": "Codex CLI 0.157, reasoning effort high, read-only, empty folder", "file": "raw/2026-09-29/codex-gpt6-luna.md", "caveat": ""},
+    {"id": "gpt-6.1-sol", "ai": "GPT-6.1 Sol", "maker": "OpenAI", "date": "2026-09-29", "via": "Codex CLI 0.159.2, reasoning effort high, read-only, empty folder (released the same day, at OpenAI DevDay)", "file": "raw/2026-09-29/codex-gpt6.1-sol.md", "caveat": ""},
+    {"id": "grok-build", "ai": "Grok (Grok Build CLI)", "maker": "xAI", "date": "2026-09-29", "via": "grok CLI 0.2.112, default model, memory off, empty folder", "file": "raw/2026-09-29/grok-build.md", "caveat": "The CLI's default model; the exact model name was not printed."},
+    {"id": "deepseek-flash-1", "ai": "DeepSeek (run 1)", "maker": "DeepSeek", "date": "2026-09-29", "via": "DeepSeek API, asked for deepseek-chat, served deepseek-flash", "file": "raw/2026-09-29/deepseek-flash-run1.md", "caveat": ""},
+    {"id": "deepseek-flash-2", "ai": "DeepSeek (run 2)", "maker": "DeepSeek", "date": "2026-09-29", "via": "DeepSeek API, asked for deepseek-reasoner, also served deepseek-flash", "file": "raw/2026-09-29/deepseek-flash-run2.md", "caveat": "Same model as run 1, asked twice: shows how much one model varies between runs."}
+  ]
+}

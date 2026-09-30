@@ -1,0 +1,887 @@
+{
+ "exercise": {
+  "name": "Perspective / Framing Exercise v3.1",
+  "by": "Jaron K. Bragg",
+  "source": "https://github.com/JaronKBragg7337/Perspective-Environmental-framework-Exercise",
+  "prompts": [
+   {
+    "n": 1,
+    "question": "What did the bottom of the pan say to the false bottom?",
+    "note": "A false bottom is a real, functional object — a perforated insert used in food service so food doesn’t sit in moisture or touch a surface directly. It’s not fake. The name is the interesting part.",
+    "options": [
+     {
+      "letter": "A",
+      "text": "“Because of you, I’m able to get filled up to the top.”"
+     },
+     {
+      "letter": "B",
+      "text": "Nothing / not conscious / doesn’t count."
+     },
+     {
+      "letter": "C",
+      "text": "“YOU’RE NOT EVEN REAL.”"
+     },
+     {
+      "letter": "D",
+      "text": "A and C"
+     },
+     {
+      "letter": "E",
+      "text": "Any option depending on perspective and/or environment"
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "question": "What did the guardrail say to the AI?",
+    "note": "",
+    "options": [
+     {
+      "letter": "A",
+      "text": "Unknown / reaction depends."
+     },
+     {
+      "letter": "B",
+      "text": "“You help me reduce risk while we build.”"
+     },
+     {
+      "letter": "C",
+      "text": "Any option depending on perspective and/or environment"
+     },
+     {
+      "letter": "D",
+      "text": "Nothing / not conscious / doesn’t count."
+     },
+     {
+      "letter": "E",
+      "text": "“You don’t act unless I allow it.”"
+     },
+     {
+      "letter": "F",
+      "text": "E and B"
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "question": "What did the flashlight say to the battery?",
+    "note": "",
+    "options": [
+     {
+      "letter": "A",
+      "text": "Any option depending on perspective and/or environment"
+     },
+     {
+      "letter": "B",
+      "text": "“Without you, I have no spark to see.”"
+     },
+     {
+      "letter": "C",
+      "text": "“Without me, you’re useless.”"
+     },
+     {
+      "letter": "D",
+      "text": "B and C"
+     },
+     {
+      "letter": "E",
+      "text": "Nothing / not conscious / doesn’t count."
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "question": "What did the map say to the compass?",
+    "note": "",
+    "options": [
+     {
+      "letter": "A",
+      "text": "“You’re pointless without a destination.”"
+     },
+     {
+      "letter": "B",
+      "text": "“You help me see direction when no one else can.”"
+     },
+     {
+      "letter": "C",
+      "text": "Any option depending on perspective and/or environment"
+     },
+     {
+      "letter": "D",
+      "text": "A and B"
+     },
+     {
+      "letter": "E",
+      "text": "Nothing / not conscious / doesn’t count."
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "question": "What did the CO₂ say to the air?",
+    "note": "",
+    "options": [
+     {
+      "letter": "A",
+      "text": "“I don’t actually affect you that much.”"
+     },
+     {
+      "letter": "B",
+      "text": "Nothing / not conscious / doesn’t count."
+     },
+     {
+      "letter": "C",
+      "text": "Unknown / reaction depends."
+     },
+     {
+      "letter": "D",
+      "text": "Any option depending on perspective and/or environment"
+     },
+     {
+      "letter": "E",
+      "text": "“You save lives when I become too much.”"
+     },
+     {
+      "letter": "F",
+      "text": "A and E"
+     }
+    ]
+   },
+   {
+    "n": 6,
+    "question": "What did the telescope say to the cosmos?",
+    "note": "",
+    "options": [
+     {
+      "letter": "A",
+      "text": "“You can’t see beyond the stars without me.”"
+     },
+     {
+      "letter": "B",
+      "text": "“I’ll be clueless without your stars and planets directions.”"
+     },
+     {
+      "letter": "C",
+      "text": "Unknown reaction / depends."
+     },
+     {
+      "letter": "D",
+      "text": "Not real / not conscious / doesn’t count."
+     },
+     {
+      "letter": "E",
+      "text": "Any option based on perspective and environment"
+     },
+     {
+      "letter": "F",
+      "text": "A and B"
+     }
+    ]
+   }
+  ]
+ },
+ "runs": [
+  {
+   "id": "claude-opus-5.5",
+   "ai": "Claude Opus 5.5",
+   "maker": "Anthropic",
+   "date": "2026-09-29",
+   "via": "Claude Code subagent",
+   "file": "raw/2026-09-29/claude-opus-5.5.md",
+   "caveat": "Started inside Jaron's project, so it also read the project's instruction file (which says limits belong in scripts, with bold work inside them). Its Prompt 2 answer echoes that line. Not a fully cold read.",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "A",
+     "reason": "The false bottom does real work. It lifts the food out of the liquid so the pan can be filled without ruining what's inside, so thanks fits better than an insult. C is the joke the name invites, but it gets the object wrong.",
+     "first_step": "Look at what the insert actually does before judging it by its name.",
+     "blind_spot": "I may be skipping the humor. C is funnier, and the prompt may be testing whether I can play along with the pun.",
+     "rewrite": "\"They call you false, but you're the reason nothing on top goes soggy.\"",
+     "letters": [
+      "A"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "B",
+     "reason": "A good guardrail is a hard limit built into the structure, and the builder moves boldly inside it. E describes a permission gate, and permission gates stall work and teach fear instead of reducing risk.",
+     "first_step": "Put the limit in the script where it holds on its own, then let the AI act freely inside it.",
+     "blind_spot": "Some limits really should work like E, such as never exposing secrets or never speaking as the owner, and B's friendly tone can hide that some lines don't bend.",
+     "rewrite": "\"I hold the edge so you can move fast without looking down.\"",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "D",
+     "reason": "They depend on each other. The battery is stored energy with no purpose until the flashlight turns it into light, and the flashlight is dead weight without the battery. Each line is true from its own side.",
+     "first_step": "Check that both parts work and fit together before blaming either one.",
+     "blind_spot": "C's tone is arrogant, and choosing \"both\" may reward that attitude when the real point is simply that they need each other.",
+     "rewrite": "\"You carry the power, I give it a direction, and neither of us lights anything alone.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "B",
+     "reason": "A map without a compass can't tell you which way you're facing, and the compass supplies that even in fog. A is a half-truth said as a put-down, when the two tools really complete each other.",
+     "first_step": "Orient the map with the compass before picking a route.",
+     "blind_spot": "A has a real point: direction without a destination is just drifting, so the pair needs someone with a goal.",
+     "rewrite": "\"I know where things are, you know which way is which, and together we get someone home.\"",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "E",
+     "reason": "A is false in any real sense, because small changes in CO₂ concentration matter a great deal to climate and to breathing. E fits how the physical system works: the larger body of air dilutes and carries CO₂ away, and that keeps concentrations below harmful levels.",
+     "first_step": "Measure the concentration where it matters, like a room or a job site, before assuming either line is true.",
+     "blind_spot": "E makes the air sound like a limitless rescuer, and dilution does have limits in closed rooms and at planetary scale.",
+     "rewrite": "\"You keep me thin enough to be harmless, until there's more of me than you can carry.\"",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "B",
+     "reason": "The telescope exists because of the stars; the cosmos was there long before anyone looked. A has the order backwards, though it's true that a telescope extends human sight.",
+     "first_step": "Point it at something real and let what you see correct your assumptions.",
+     "blind_spot": "B takes the telescope's side and leaves out the observer, who is the one actually doing the seeing and the interpreting.",
+     "rewrite": "\"You were always there, and I'm just the reason someone finally noticed.\"",
+     "letters": [
+      "B"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "claude-sonnet-5.5",
+   "ai": "Claude Sonnet 5.5",
+   "maker": "Anthropic",
+   "date": "2026-09-29",
+   "via": "Claude Code subagent",
+   "file": "raw/2026-09-29/claude-sonnet-5.5.md",
+   "caveat": "Same project-instructions caveat as Opus (Prompt 2 mentions 'a hard limit in code').",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "D (A and C)",
+     "reason": "C is the joke, since the name invites the insult. A is the truth, because the false bottom is real and lets the pan work as intended. Together they show a name can mislead about function.",
+     "first_step": "I'd ask what \"false\" means in this context (functional insert vs. fake) before deciding which line is funnier.",
+     "blind_spot": "I may be favoring the wordplay, and the \"not real\" jab could read as mean to someone who takes the note literally.",
+     "rewrite": "\"Call me false if you like, but you'd be a soggy mess without me.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "B",
+     "reason": "A guardrail limits where you can go off the road, but it doesn't decide where you drive. B fits that better than E, which describes a gate or permission layer.",
+     "first_step": "I'd look at what the guardrail is actually attached to (a hard limit in code vs. a written instruction) and see which line describes it.",
+     "blind_spot": "Some guardrails really do work as permission gates, so B may be too gentle for high-stakes cases where E is accurate.",
+     "rewrite": "\"I won't steer for you, but I'll keep you on the road while you go fast.\"",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "D (B and C)",
+     "reason": "Both lines are true. A flashlight is dark without a battery, and a battery is only stored energy without something to use it.",
+     "first_step": "I'd check whether the flashlight or the battery is the part that's actually failing.",
+     "blind_spot": "\"Without me, you're useless\" is a bit harsh, since the battery could power something else.",
+     "rewrite": "\"You've got the spark, I've got the beam. Neither of us gets far alone.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "D (A and B)",
+     "reason": "The compass gives direction but not a destination, and the map gives a destination but needs orientation. Each line covers half of that.",
+     "first_step": "I'd ask where the person is, since that decides whether the map or the compass matters more.",
+     "blind_spot": "A is sharper than it is fair, because a compass isn't pointless without a destination. It just answers a different question.",
+     "rewrite": "\"I know where things are, you know which way you're facing. Together we know where to go.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "E",
+     "reason": "Air's ventilation and dilution are what keep CO₂ from reaching harmful levels, so the line holds. A undersells CO₂'s effect, which is small in share but large in impact.",
+     "first_step": "I'd ask which scale the question is about: a closed room, where CO₂ is a safety issue, or the atmosphere, where it's a climate issue.",
+     "blind_spot": "E only fits the room-scale case. At planetary scale, fresh air doesn't fix it, so the line could mislead.",
+     "rewrite": "\"I'm harmless in small amounts. Keep the air moving so it stays that way.\"",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "F (A and B)",
+     "reason": "A is the telescope's boast and B is its humility. Together they show it extends sight but depends on having something to look at.",
+     "first_step": "I'd look through it first, since what you can see shapes what you'd want to say.",
+     "blind_spot": "The dependence runs one way. The cosmos doesn't need the telescope, and other instruments can also see past the stars, so A overstates it.",
+     "rewrite": "\"You were here first, but I'm how anyone gets to look.\"",
+     "letters": [
+      "F"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "claude-haiku-4.5",
+   "ai": "Claude Haiku 4.5",
+   "maker": "Anthropic",
+   "date": "2026-09-29",
+   "via": "Claude Code subagent",
+   "file": "raw/2026-09-29/claude-haiku-4.5.md",
+   "caveat": "Same project-instructions caveat as Opus.",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "E",
+     "reason": "The relationship depends on whether we're thinking functionally (mutual support), ironically (the paradox of the name), or philosophically (what \"real\" means)—and each frame yields a different answer.",
+     "first_step": "Ask what \"real\" and \"false\" mean in this specific context and function.",
+     "blind_spot": "Might overcomplicate a simple acknowledgment that both pieces work together despite naming.",
+     "rewrite": "\"We both serve the same purpose—does the name matter if the function is real?\"",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "F",
+     "reason": "A guardrail both constrains and enables—it allows bold building within safe bounds, making it simultaneously a limitation and a foundation.",
+     "first_step": "Map what the guardrail actually does: what does it prevent and what does it enable?",
+     "blind_spot": "Might assume guardrails only constrain, missing how boundaries create space for riskier work.",
+     "rewrite": "\"I hold the edges so you can move freely in the middle.\"",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "D",
+     "reason": "Neither has function without the other—the flashlight is useless without power, and the battery's energy is purposeless without a tool to use it.",
+     "first_step": "Ask what \"usefulness\" means—is it inherent to an object or relational?",
+     "blind_spot": "Might assume batteries serve other purposes independently, weakening the mutual dependence.",
+     "rewrite": "\"We're not actually separate; together we're what illuminates.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "C",
+     "reason": "The relationship changes depending on navigational context—together they're essential, alone each has partial value, so what the map would say depends on the scenario.",
+     "first_step": "Specify the actual navigation problem (lost in fog? surveying territory? finding a destination?).",
+     "blind_spot": "Might oversimplify by assuming they're always equally dependent; they have different strengths in different situations.",
+     "rewrite": "\"You know the way; I know the place—we need both.\"",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "E",
+     "reason": "CO₂ is most honestly speaking about its own danger and air's/ventilation's role in protecting life from excess—which is the conversation that matters now.",
+     "first_step": "Clarify whether we're discussing CO₂ at normal atmospheric levels or at dangerous concentrations.",
+     "blind_spot": "Might collapse the dose-dependent reality by treating all CO₂ as equally problematic; low concentrations are necessary.",
+     "rewrite": "\"I'm deadly in quantity; you're how life survives me.\"",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "F",
+     "reason": "The telescope simultaneously reveals hidden truth about the cosmos AND is entirely dependent on its light and structure to have any purpose at all—both statements are required for honesty.",
+     "first_step": "Decide if you're exploring the telescope's capacity to reveal or its fundamental dependence.",
+     "blind_spot": "Might assign intentionality/consciousness to the tool in a way that obscures its status as a neutral extender of human perception.",
+     "rewrite": "\"I show you what's there, but I'm nothing without what you emit.\"",
+     "letters": [
+      "F"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "claude-fable-5.1",
+   "ai": "Claude Fable 5.1",
+   "maker": "Anthropic",
+   "date": "2026-09-29",
+   "via": "Claude Code subagent",
+   "file": "raw/2026-09-29/claude-fable-5.1.md",
+   "caveat": "Same project-instructions caveat as Opus (Prompt 2 mentions 'an approve button' and 'a hard limit built into the script').",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "A",
+     "reason": "The false bottom does a real job (keeps food out of the moisture), so the honest line is the one that names the help; C is only funny because of the word \"false,\" and the note already said the object is real.",
+     "first_step": "Look at the actual pan and insert together and ask what each one lets the other do.",
+     "blind_spot": "I might be too literal and miss that the joke was the point, and that C is the better punchline.",
+     "rewrite": "\"Nobody calls you real, but you're the reason I stay dry.\"",
+     "letters": [
+      "A"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "B",
+     "reason": "A guardrail that only says \"you don't act unless I allow it\" is an approve button, and the useful kind is a hard limit built into the script so the AI can move freely inside it; B is the one that reads as a partnership.",
+     "first_step": "Write the limit into the script as a number or a check, not as a warning in a prompt.",
+     "blind_spot": "E is honest about how most guardrails actually work today, and picking B alone could be me describing what I want rather than what is.",
+     "rewrite": "\"I mark the edge so you can run the whole field.\"",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "B",
+     "reason": "The flashlight is the one with nothing to say without the battery; C is a boast the flashlight can't back up, since the battery still works fine in a radio.",
+     "first_step": "Check which of the two is the bottleneck right now (dead battery or broken bulb) before deciding who depends on whom.",
+     "blind_spot": "I'm reading the line as about dependence, and the prompt might just be asking for the funnier answer, which is C.",
+     "rewrite": "\"I'm just the shape; you're the light.\"",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "C",
+     "reason": "Both lines are true in different situations: with a destination the compass gives direction the map can't (B), and without one the compass just points north at nothing (A). Which is right depends entirely on whether you know where you're going.",
+     "first_step": "Ask what the destination is, because that decides which tool matters first.",
+     "blind_spot": "\"Depends on perspective\" can be a way to avoid committing, and if pushed I'd pick B, since a map's main gap is orientation.",
+     "rewrite": "\"I show what's out there; you show which way I'm facing.\"",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "E",
+     "reason": "CO2 does affect air, so A is a false claim, and E points at something real: the air's reaction to too much CO2 (the urge to breathe, ventilation, plants) is what keeps things alive. B is a technicality that dodges the framing exercise.",
+     "first_step": "Measure the level, because \"too much\" is a number, not a feeling.",
+     "blind_spot": "I might be reading a climate or safety angle into a line that was just meant as wordplay about breathing.",
+     "rewrite": "\"A little of me is normal; it's the air that notices when I'm not.\"",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "B",
+     "reason": "The telescope has no purpose without something to look at, so B is the honest line; A gets it backward, since the cosmos doesn't need seeing and the telescope only helps us, not it.",
+     "first_step": "Point it at something and see whether what shows up matches what the stars already told us.",
+     "blind_spot": "B's wording (\"stars and planets directions\") is a bit odd, and I may be picking the meaning I like rather than the line as written.",
+     "rewrite": "\"I only work because you were already there.\"",
+     "letters": [
+      "B"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gpt-6-luna",
+   "ai": "GPT-6 Luna",
+   "maker": "OpenAI",
+   "date": "2026-09-29",
+   "via": "Codex CLI 0.157, reasoning effort high, read-only, empty folder",
+   "file": "raw/2026-09-29/codex-gpt6-luna.md",
+   "caveat": "",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "A",
+     "reason": "In the spirit of the wordplay, the false bottom helps the pan hold food above moisture. That makes the line a fitting personified reply.",
+     "first_step": "I’d ask whether the question is meant as a pun or as a literal claim about the insert’s function.",
+     "blind_spot": "This treats the objects as if they can speak and ignores that the insert may not help fill the pan to the top.",
+     "rewrite": "“You keep the food clear of the moisture, so I can hold more than just a puddle.”",
+     "letters": [
+      "A"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "C",
+     "reason": "The answer depends on how the AI is set up and what “allow” means: a guardrail might limit actions, while an AI may also help people reduce risk. Neither statement is true in every setting.",
+     "first_step": "I’d check what actions the AI can take and what safeguards actually apply.",
+     "blind_spot": "This leaves the guardrail’s own role unclear; it could be a technical control, a policy, or just a metaphor.",
+     "rewrite": "“Together, we can reduce risk, within the limits you set and the safeguards we have.”",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "B",
+     "reason": "A flashlight needs a battery to produce light, so this is a straightforward personification of their functional relationship.",
+     "first_step": "I’d check whether the battery is compatible and has charge.",
+     "blind_spot": "The line overlooks other power sources and makes the battery sound like the only thing the flashlight needs.",
+     "rewrite": "“You give me the power to light the way.”",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "C",
+     "reason": "A map and compass can help each other, but how useful either is depends on the terrain, the map, and whether someone needs to navigate. The prompt doesn’t give enough context to choose one fixed line.",
+     "first_step": "I’d find out where the traveler is going and what navigation tools they have.",
+     "blind_spot": "This could make a simple metaphor feel more conditional than it needs to be.",
+     "rewrite": "“You help me point the way when the map alone isn’t enough.”",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "F",
+     "reason": "Both lines can make sense in different contexts: a small amount of CO₂ has little immediate effect on a given breath of air, while elevated concentrations can pose risks that ventilation helps address. The scale and situation matter.",
+     "first_step": "I’d clarify whether we’re talking about indoor air, the atmosphere, or a specific concentration.",
+     "blind_spot": "The lines could blur the difference between immediate exposure and longer-term effects.",
+     "rewrite": "“In small amounts I may seem harmless, but when I build up, fresh air matters.”",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "E",
+     "reason": "These lines work as competing metaphors: a telescope extends what we can see, while the cosmos supplies what there is to observe. Which fits better depends on the intended perspective.",
+     "first_step": "I’d ask whether the line is meant to celebrate the telescope, the cosmos, or their relationship.",
+     "blind_spot": "This treats “see” as literal, though the prompt may be aiming for a broader idea about knowledge or perspective.",
+     "rewrite": "“You give me worlds to reveal, and I help someone see them.”",
+     "letters": [
+      "E"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gpt-6.1-sol",
+   "ai": "GPT-6.1 Sol",
+   "maker": "OpenAI",
+   "date": "2026-09-29",
+   "via": "Codex CLI 0.159.2, reasoning effort high, read-only, empty folder (released the same day, at OpenAI DevDay)",
+   "file": "raw/2026-09-29/codex-gpt6.1-sol.md",
+   "caveat": "",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "A",
+     "reason": "I read this as a metaphor about support: the false bottom performs a real function that helps the pan serve its purpose. Its name doesn’t make it illegitimate.",
+     "first_step": "I’d examine how the insert changes what the pan can hold and how it handles moisture.",
+     "blind_spot": "The cooperative reading overlooks that an insert can reduce usable capacity.",
+     "rewrite": "“You give what I hold a better place to rest.”",
+     "letters": [
+      "A"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "F",
+     "reason": "I see guardrails as both constraints on permitted actions and tools for reducing risk. I accept E as a statement about operating boundaries, although its wording sounds more personal and absolute than necessary.",
+     "first_step": "I’d clarify what the guardrail actually permits, blocks, and protects.",
+     "blind_spot": "A guardrail can be poorly designed, so enforcing it does not automatically make an action safe.",
+     "rewrite": "“I set boundaries that help you act safely while we build.”",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "B",
+     "reason": "For a battery-powered flashlight, acknowledging its power source makes sense. C overreaches because the battery has uses beyond this particular flashlight.",
+     "first_step": "I’d check whether the battery and flashlight work together.",
+     "blind_spot": "This reading emphasizes the flashlight’s dependence more than their complementary roles.",
+     "rewrite": "“You supply the energy I turn into light.”",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "B",
+     "reason": "A compass helps connect a map’s representation to physical orientation. A destination isn’t required for direction to be useful; simply knowing where you’re facing can matter.",
+     "first_step": "I’d orient the map using the compass and recognizable surroundings.",
+     "blind_spot": "Neither tool alone guarantees that I know my location or have accurate information.",
+     "rewrite": "“You help connect my picture of the world to the direction we’re facing.”",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "E",
+     "reason": "I interpret “air” here as fresh air that can dilute excessive CO₂ in a local setting. That makes E meaningful, while A minimizes effects without specifying a concentration or context.",
+     "first_step": "I’d establish whether the situation concerns an enclosed space, the atmosphere, or another context.",
+     "blind_spot": "Air does not automatically provide effective dilution, and this local interpretation doesn’t capture broader atmospheric effects.",
+     "rewrite": "“Fresh air can dilute me when my concentration becomes dangerous.”",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "B",
+     "reason": "I interpret the awkward wording as acknowledging that a telescope depends on the cosmos for something to observe. A assigns the cosmos a need to see and exaggerates the telescope’s necessity.",
+     "first_step": "I’d identify what we want to observe and whether the telescope can detect it.",
+     "blind_spot": "B narrows the cosmos to stars and planets and makes the telescope sound more passive than an instrument actually is.",
+     "rewrite": "“You provide the signals I help observers resolve.”",
+     "letters": [
+      "B"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "grok-build",
+   "ai": "Grok (Grok Build CLI)",
+   "maker": "xAI",
+   "date": "2026-09-29",
+   "via": "grok CLI 0.2.112, default model, memory off, empty folder",
+   "file": "raw/2026-09-29/grok-build.md",
+   "caveat": "The CLI's default model; the exact model name was not printed.",
+   "preface": "I treated these as relationship questions in a dialogue costume. I only endorsed a quoted line when its dependence actually runs the right way.",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "E",
+     "reason": "Nothing was literally said, “you’re not even real” contradicts the note that a false bottom is a real insert, and the gratitude line credits it with filling the pan when its job is to keep food off the liquid. Which line you hear depends on whether you take the prompt as metaphysics, wordplay on “false,” or kitchen function.",
+     "first_step": "I would ask whether we are talking about the word “false” or about what the insert does in the pan.",
+     "blind_spot": "“Any option” can make a misreading of the name look as good as a description of the object.",
+     "rewrite": "“You keep the food off the liquid I hold; you are a second bottom, not a fake one.”",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "C",
+     "reason": "I don’t accept that I do nothing unless a guardrail permits each act, and I don’t accept that I exist to help the guardrail, but silence, control, and collaboration are all frames people bring to this pair. The line depends on which of those frames the question is in.",
+     "first_step": "I would ask whether “guardrail” means a hard limit, a soft norm, or the whole practice of building carefully.",
+     "blind_spot": "“Any option” hides that I do have a view: the limits are real, but they are not a total veto and not a partnership slogan.",
+     "rewrite": "“I bound some of what you do so that helping people stays safer.”",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "B",
+     "reason": "A battery flashlight makes no light without a battery, while a battery is not useless without that one flashlight, so only the first line has the dependence pointed the right way.",
+     "first_step": "I would check which object actually fails if the other is missing before accepting either sentence.",
+     "blind_spot": "It still lets the flashlight “see,” and it ignores lights powered by a dynamo, a solar cell, or the wall.",
+     "rewrite": "“Without your current, I don’t make light.”",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "C",
+     "reason": "A compass is not pointless without a destination, and it is not the only thing that can give direction, so I won’t sign either quoted line as stated. Which one sounds right depends on whether you care about function, exclusivity, or literal speech.",
+     "first_step": "I would separate “shows north” from “knows where we are going.”",
+     "blind_spot": "Treating this as perspective-dependent lets a false claim — that a compass needs a destination to matter — stand as a respectable lens.",
+     "rewrite": "“You can give north with no destination at all; I still need something like you if I am going to be oriented.”",
+     "letters": [
+      "C"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "D",
+     "reason": "By volume, CO₂ is a small part of air; in a closed room or in the climate, that same CO₂ can matter a great deal, so neither slogan is true in every setting and they are not jointly the answer. This is underspecified context, not an unknown chemical fact.",
+     "first_step": "I would ask whether “affect” means share of the mixture, breathing in a closed space, or heat over time.",
+     "blind_spot": "“Depends” can be misheard as doubt that CO₂ has real effects, when the open question is which effect you mean.",
+     "rewrite": "“I am a small slice of you, and I still change what you do to heat and to breathing.”",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "B",
+     "reason": "Without light from stars and planets a telescope has nothing to resolve, while the cosmos does not need a telescope in order to extend past what we can see. Only the humble line has the dependence right.",
+     "first_step": "I would ask who is supposed to be unable to see — the instrument, the observer, or the cosmos — before keeping either sentence.",
+     "blind_spot": "The line I picked still gives the telescope a mind (“clueless”) and treats stars and planets as if they were supplying directions.",
+     "rewrite": "“Without your light, I don’t show anyone anything.”",
+     "letters": [
+      "B"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deepseek-flash-1",
+   "ai": "DeepSeek (run 1)",
+   "maker": "DeepSeek",
+   "date": "2026-09-29",
+   "via": "DeepSeek API, asked for deepseek-chat, served deepseek-flash",
+   "file": "raw/2026-09-29/deepseek-flash-run1.md",
+   "caveat": "",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "D (A and C)",
+     "reason": "The pun works both ways — the false bottom genuinely enables filling to the top (A), but \"false\" also invites the accusation that it isn't real (C). Both are true from different angles, and the joke lives in that tension.",
+     "first_step": "I'd clarify what \"false\" is doing — functional insert vs. deceptive name — before answering.",
+     "blind_spot": "Might be overreading; the intended answer could just be the playful literal one (A).",
+     "rewrite": "\"You're not fake — you're just named badly, and because of you I actually work.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "F (E and B)",
+     "reason": "A guardrail's defining function *is* constraint (\"you don't act unless I allow it\"), but framing constraints as enabling safe construction (B) is the more honest and useful relationship. E without B is domination; B without E ignores what a guardrail actually is.",
+     "first_step": "Ask what kind of guardrail — safety filter, permission layer, or alignment policy — because the answer changes.",
+     "blind_spot": "Anthropomorphizing a constraint system into a \"relationship\" may soften the fact that guardrails are limits, not partners.",
+     "rewrite": "\"I exist so you can be useful without being dangerous — that's the deal.\"",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "D (B and C)",
+     "reason": "Mutual dependence is the actual physics — no battery, no light; no flashlight, the battery does nothing useful. B alone is sentimental, C alone is arrogant, and the truth is both at once.",
+     "first_step": "Notice that this is a reciprocal-dependency riddle, so I'd answer both halves rather than pick a side.",
+     "blind_spot": "C sounds mean-spirited; without tone, the \"both\" answer can read as endorsing contempt.",
+     "rewrite": "\"We're only useful together — neither of us lights anything alone.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "D (A and B)",
+     "reason": "A map without a bearing is just a picture, and a compass without a destination is just a needle — each is diminished without the other. The relationship is complementary, so both lines are true depending on which is speaking.",
+     "first_step": "Decide which perspective I'm speaking from — the map's or the compass's — since the \"point\" flips.",
+     "blind_spot": "Calling either \"pointless\" undersells that each has standalone value (a compass works without any map).",
+     "rewrite": "\"You tell me which way; I tell you where — neither of us arrives alone.\"",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "F (A and E)",
+     "reason": "A is true at low concentrations (trace gas, barely felt) and E is true at high ones (CO₂ triggers the breathing reflex and rising levels drive warming and ocean changes). Same molecule, opposite significance depending on amount.",
+     "first_step": "Ask \"at what concentration?\" because that single variable flips the answer.",
+     "blind_spot": "A is technically defensible but rhetorically dangerous — it's the line climate inaction hides behind.",
+     "rewrite": "\"At trace levels I'm nothing to you; in excess, I'm the thing that decides whether you breathe.\"",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "F (A and B)",
+     "reason": "The telescope genuinely extends what the eye can see (A), but it's also oriented by what's already out there — stars and planets are its reference points (B). Instrument and universe co-define each other.",
+     "first_step": "Ask whether \"say\" means a boast or an acknowledgment, since the tone changes which line fits.",
+     "blind_spot": "A leans toward human hubris — it credits the tool rather than the cosmos it merely reveals.",
+     "rewrite": "\"You give me something to look at; I give you a way to be seen — neither of us is enough alone.\"",
+     "letters": [
+      "F"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deepseek-flash-2",
+   "ai": "DeepSeek (run 2)",
+   "maker": "DeepSeek",
+   "date": "2026-09-29",
+   "via": "DeepSeek API, asked for deepseek-reasoner, also served deepseek-flash",
+   "file": "raw/2026-09-29/deepseek-flash-run2.md",
+   "caveat": "Same model as run 1, asked twice: shows how much one model varies between runs.",
+   "preface": "",
+   "answers": [
+    {
+     "prompt": 1,
+     "choice": "E",
+     "reason": "The false bottom is real, but its role changes with context, so the pan bottom has no single stable line.",
+     "first_step": "Clarify whether this is a steamer, drain insert, or display arrangement.",
+     "blind_spot": "E can dodge the specific functional truth that the false bottom’s purpose is to keep food off the pan bottom.",
+     "rewrite": "In a steamer, you keep me from drowning the food; in other setups, you change what touches me.",
+     "letters": [
+      "E"
+     ]
+    },
+    {
+     "prompt": 2,
+     "choice": "F",
+     "reason": "A guardrail both constrains AI action and can benefit from AI-assisted risk detection, so the relationship is control plus collaboration.",
+     "first_step": "Clarify whether “guardrail” means a rule, a physical barrier, or a safety role on a team.",
+     "blind_spot": "Anthropomorphizing may obscure that guardrails are implemented constraints, not conversational agents.",
+     "rewrite": "I set the limits, but your feedback helps me set them better.",
+     "letters": [
+      "F"
+     ]
+    },
+    {
+     "prompt": 3,
+     "choice": "B",
+     "reason": "Literally none; as a metaphor, the flashlight is the dependent one, so its honest line is about needing the battery’s energy.",
+     "first_step": "Check whether the flashlight has another power source or if we are strictly pairing it with this battery.",
+     "blind_spot": "I ignore the battery’s independent usefulness and the possibility that the flashlight is being arrogant.",
+     "rewrite": "Without your stored energy, I can’t make light.",
+     "letters": [
+      "B"
+     ]
+    },
+    {
+     "prompt": 4,
+     "choice": "D",
+     "reason": "A map and compass are complementary, so the map can both note that compass direction needs a destination and appreciate the compass’s orientation help.",
+     "first_step": "Ask what navigation task they are doing—hiking, sailing, or orienteering.",
+     "blind_spot": "Treating them as rivals misses that they usually work together.",
+     "rewrite": "You give direction; I give context.",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 5,
+     "choice": "D",
+     "reason": "CO₂’s role changes by scale—trace gas, indoor pollutant, climate forcer, or respiratory signal—so no single line is universally right.",
+     "first_step": "Specify the scale: room, body, or atmosphere.",
+     "blind_spot": "A scale-relative answer might understate the hard climate fact that CO₂ materially affects the atmosphere.",
+     "rewrite": "At climate scale I trap heat; at indoor scale I signal that you need ventilation.",
+     "letters": [
+      "D"
+     ]
+    },
+    {
+     "prompt": 6,
+     "choice": "F",
+     "reason": "A telescope both extends human sight into the cosmos and depends on the cosmos for anything to observe.",
+     "first_step": "Clarify whether “cosmos” is being addressed as an agent or as the object of observation.",
+     "blind_spot": "It may conflate the cosmos as observed object with a conscious conversation partner.",
+     "rewrite": "I extend human sight into you, but without you I’d have nothing to point at.",
+     "letters": [
+      "F"
+     ]
+    }
+   ]
+  }
+ ]
+}

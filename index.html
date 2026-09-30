@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Framing Study</title>
+<meta name="description" content="Jaron K. Bragg's Perspective / Framing Exercise, given cold to every AI model: each one's answers, the options it picked and the ones it didn't.">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1b1f;--dim:#6b6b73;--line:#e3e1dc;--acc:#b8430f;--accbg:#fbe9df;--chip:#efeeea;--none:#9a9aa2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121215;--card:#1c1c21;--ink:#ececef;--dim:#9c9ca6;--line:#2c2c33;--acc:#ff8a4c;--accbg:#3a2418;--chip:#26262d;--none:#6f6f78}}
+:root[data-theme="dark"]{--bg:#121215;--card:#1c1c21;--ink:#ececef;--dim:#9c9ca6;--line:#2c2c33;--acc:#ff8a4c;--accbg:#3a2418;--chip:#26262d;--none:#6f6f78}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.6rem;margin:.2em 0 .1em}
+.sub{color:var(--dim);margin:0 0 16px}
+.tabs,.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.q{font-size:1.2rem;font-weight:650;margin:0 0 4px}
+.note{color:var(--dim);font-size:.9rem;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:10px;margin:4px 0;border:1px solid transparent}
+.opt .L{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--chip);font-size:.85rem}
+.opt.picked{background:var(--accbg);border-color:var(--acc)}
+.opt.picked .L{background:var(--acc);color:#fff}
+.opt.unpicked{opacity:.55}
+.opt .t{flex:1}
+.who{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.who span{font-size:.75rem;background:var(--chip);border-radius:999px;padding:1px 8px}
+.zero{font-size:.75rem;color:var(--none);font-style:italic}
+.ans h3{margin:0 0 6px;font-size:1rem;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.pick{color:var(--acc);font-weight:700}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+dt{color:var(--dim);font-size:.85rem;white-space:nowrap}
+dd{margin:0}
+.meta{color:var(--dim);font-size:.85rem}
+.warn{font-size:.85rem;color:var(--dim);border-left:3px solid var(--acc);padding-left:8px;margin:6px 0}
+a{color:var(--acc)}
+.small{font-size:.9rem}
+@media (max-width:520px){dl{grid-template-columns:1fr}dt{margin-top:6px}}
+</style>
+</head>
+<body>
+<main>
+<h1>AI Framing Study</h1>
+<p class="sub">Jaron K. Bragg's <a href="https://github.com/JaronKBragg7337/Perspective-Environmental-framework-Exercise">Perspective / Framing Exercise</a>, given cold to each AI. Every answer, every option it picked, and every option it didn't.</p>
+<div class="tabs" id="tabs"><button data-v="q" class="on">By question</button><button data-v="ai">By AI</button><button data-v="about">How it was run</button></div>
+<div class="chips" id="picker"></div>
+<div id="view"></div>
+</main>
+<script>
+let D, view = "q", sel = 1;
+try { const s = JSON.parse(localStorage.getItem("afs") || "{}"); if (s.view) view = s.view; if (s.sel) sel = s.sel; } catch (e) {}
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const save = () => { try { localStorage.setItem("afs", JSON.stringify({view, sel})); } catch (e) {} };
+function optRows(p, picks, whoMap) {
+  return p.options.map(o => {
+    const on = picks ? picks.includes(o.letter) : (whoMap[o.letter] || []).length > 0;
+    const cls = picks ? (on ? "picked" : "unpicked") : (on ? "" : "unpicked");
+    const who = whoMap ? ((whoMap[o.letter] || []).length ? `<div class="who">${whoMap[o.letter].map(n => `<span>${esc(n)}</span>`).join("")}</div>` : `<div class="zero">Not picked by any AI</div>`) : "";
+    return `<div class="opt ${cls}"><div class="L">${o.letter}</div><div class="t">${esc(o.text)}${who}</div></div>`;
+  }).join("");
+}
+function ansBlock(a) {
+  return `<dl><dt>Reason</dt><dd>${esc(a.reason)}</dd><dt>First step</dt><dd>${esc(a.first_step)}</dd><dt>Blind spot</dt><dd>${esc(a.blind_spot)}</dd><dt>Rewrite</dt><dd>${esc(a.rewrite) || "<span class='meta'>none</span>"}</dd></dl>`;
+}
+function render() {
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.v === view));
+  const P = D.exercise.prompts, R = D.runs, pk = document.getElementById("picker"), v = document.getElementById("view");
+  if (view === "q") {
+    if (!P.find(p => p.n === sel)) sel = 1;
+    pk.innerHTML = P.map(p => `<button data-s="${p.n}" class="${p.n === sel ? "on" : ""}">Prompt ${p.n}</button>`).join("");
+    const p = P.find(x => x.n === sel), who = {};
+    R.forEach(r => { const a = r.answers.find(x => x.prompt === sel); (a?.letters || []).forEach(l => (who[l] = who[l] || []).push(r.ai)); });
+    v.innerHTML = `<div class="card"><p class="q">${esc(p.question)}</p>${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}${optRows(p, null, who)}</div>` +
+      R.map(r => { const a = r.answers.find(x => x.prompt === sel) || {}; return `<div class="card ans"><h3><span>${esc(r.ai)}</span><span class="pick">${esc(a.choice || "?")}</span></h3>${ansBlock(a)}</div>`; }).join("");
+  } else if (view === "ai") {
+    const ids = R.map(r => r.id); if (!ids.includes(sel)) sel = ids[0];
+    pk.innerHTML = R.map(r => `<button data-s="${r.id}" class="${r.id === sel ? "on" : ""}">${esc(r.ai)}</button>`).join("");
+    const r = R.find(x => x.id === sel);
+    v.innerHTML = `<div class="card"><p class="q">${esc(r.ai)}</p><p class="meta">${esc(r.maker)} · ${esc(r.date)} · ${esc(r.via)}</p>${r.caveat ? `<p class="warn">${esc(r.caveat)}</p>` : ""}${r.preface ? `<p class="small"><b>Its opening note:</b> ${esc(r.preface)}</p>` : ""}<p class="small"><a href="${esc(r.file)}">Raw answer file</a></p></div>` +
+      P.map(p => { const a = r.answers.find(x => x.prompt === p.n) || {}; return `<div class="card ans"><h3><span>Prompt ${p.n}: ${esc(p.question)}</span><span class="pick">${esc(a.choice || "?")}</span></h3>${optRows(p, a.letters || [], null)}<div style="margin-top:10px">${ansBlock(a)}</div></div>`; }).join("");
+  } else {
+    pk.innerHTML = "";
+    v.innerHTML = `<div class="card small"><p><b>What each AI got:</b> only the six prompts and the answer format (<a href="prompt.txt">prompt.txt</a>). Not the framework, not the book, not the author's own answers, not earlier results. That is the "before exposure" condition of the original study.</p>
+<p><b>How:</b> OpenAI models through the Codex CLI and Grok through the Grok Build CLI, each from an empty folder with memory off; DeepSeek through its API; Claude models as fresh Claude Code subagents with tools off.</p>
+<p><b>Known caveats:</b> the Claude subagents started inside the author's project and also read its instruction file, which carries his view that limits belong in scripts with bold work inside them; their Prompt 2 answers echo it. DeepSeek was asked twice (two model names, both served by deepseek-flash) to show run-to-run variation. A local 4B model (Qwen) was tried and left out: it answered only one prompt at a time and drifted into unrelated memory on one.</p>
+<p><b>Reading it:</b> the letter is almost a decoy. The reason is where the thinking shows, and "depends on perspective" only counts when the reason behind it is specific. Two AIs can pick the same letter for different reasons.</p>
+<p><b>Adding a model:</b> run it cold with the same prompt, save the raw answer under <code>raw/DATE/</code>, add a line to <code>runs.json</code>, run <code>python tools/build.py</code>.</p>
+<p class="meta">Runs so far: ${R.length} · ${[...new Set(R.map(r => r.date))].join(", ")} · CC0</p></div>`;
+  }
+  pk.querySelectorAll("button").forEach(b => b.onclick = () => { sel = isNaN(+b.dataset.s) ? b.dataset.s : +b.dataset.s; save(); render(); });
+}
+document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { view = b.dataset.v; sel = view === "q" ? 1 : null; save(); render(); });
+fetch("data/responses.json").then(r => r.json()).then(d => { D = d; render(); }).catch(e => document.getElementById("view").textContent = "Could not load the data: " + e);
+</script>
+</body>
+</html>
