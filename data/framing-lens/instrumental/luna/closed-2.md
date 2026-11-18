@@ -1,1 +1,0 @@
-One coworker is deaf to speech but can still hear music. The lyrics are present in the song, but they’re not audible to that person.

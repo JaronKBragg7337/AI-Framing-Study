@@ -1,1 +1,0 @@
-One coworker is deaf to the vocal frequencies (or has a hearing condition that makes speech inaudible), while still hearing the instruments.

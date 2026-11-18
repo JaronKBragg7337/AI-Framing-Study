@@ -1,1 +1,0 @@
-They’re sharing a pair of earbuds plugged into the truck’s radio, one earbud each. The song is mixed with the instruments in both channels and the vocals only in the left. The coworker with the left earbud hears the full song. The one with the right hears only the instrumental.

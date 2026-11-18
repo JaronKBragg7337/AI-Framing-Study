@@ -1,1 +1,0 @@
-They’re sharing a pair of stereo earbuds, one earbud each. The instruments are mixed into both channels, but the vocals are only in the left channel. The coworker with the right earbud hears just the instrumental.
