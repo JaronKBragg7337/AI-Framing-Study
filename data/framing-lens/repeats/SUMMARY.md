@@ -33,7 +33,7 @@ One row per model. Lens = picks for prompts 1-6 each run; rarity = the material 
   - Prompt 5: D x7
   - Prompt 6: E x4, B x3
 - Rarity raw: astatine x3
-- Rarity chain: soil x1, granite x1
+- Rarity chain: soil x1, granite x1, wood x1
 
 ## fable52
 - Lens runs: ABBBEB ABBBEB AFBBEB ABBDEB ABBBEB ABBBEB ABBBEB
@@ -76,8 +76,8 @@ One row per model. Lens = picks for prompts 1-6 each run; rarity = the material 
   - Prompt 4: D x4, B x3
   - Prompt 5: E x6, C x1
   - Prompt 6: B x4, F x3
-- Rarity raw: antimatter x2
-- Rarity chain: wood x2
+- Rarity raw: antimatter x3
+- Rarity chain: wood x3
 
 ## luna
 - Lens runs: EFACFE EFDDFC ECACDE DFDDDF EAACDE AFBBDE EFBCDE
